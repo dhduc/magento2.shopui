@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="custom_widget" class="Smart\CustomWidget\Block\Widget\Main">
+        <label translate="true">Custom Widget</label>
+        <description>Smart custom widget</description>
+        <parameters>
+            <parameter name="header_title" xsi:type="text" visible="true" required="true" sort_order="0" >
+                <label translate="true">Header Title</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
