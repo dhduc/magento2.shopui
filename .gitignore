@@ -49,3 +49,4 @@ atlassian*
 !/var/.htaccess
 /vendor/*
 !/vendor/.htaccess
+npm-debug.log
