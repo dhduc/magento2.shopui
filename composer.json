@@ -29,7 +29,8 @@
         "magento/module-sales-rule-sample-data": "100.1.*",
         "magento/module-swatches-sample-data": "100.1.*",
         "magento/sample-data-media": "100.1.*",
-        "magento/module-offline-shipping-sample-data": "100.1.*"
+        "magento/module-offline-shipping-sample-data": "100.1.*",
+        "vpietri/adm-quickdevbar": "^0.1.10"
     },
     "require-dev": {
         "phpunit/phpunit": "4.1.0",

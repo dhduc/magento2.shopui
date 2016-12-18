@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3d1912f7f6684127f2ce741d4dcc5430",
-    "content-hash": "91c8ec7e6a3be9a6342c98edf21c0ce9",
+    "hash": "00e7ec9a9fe8b7620660b4ccdac36046",
+    "content-hash": "9fe570035ed144c5a32a51dbc98a01dc",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -519,11 +519,6 @@
         {
             "name": "magento/composer",
             "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/magento/composer.git",
-                "reference": "b53f7c8a037860b467083e94de7c17cfd323e365"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/magento/composer/zipball/b53f7c8a037860b467083e94de7c17cfd323e365",
@@ -6793,6 +6788,48 @@
                 "yui"
             ],
             "time": "2014-09-22 08:08:50"
+        },
+        {
+            "name": "vpietri/adm-quickdevbar",
+            "version": "0.1.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vpietri/magento2-developer-quickdevbar.git",
+                "reference": "d7fda32e256ed5a1de3bda101a51955c1eeec7c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vpietri/magento2-developer-quickdevbar/zipball/d7fda32e256ed5a1de3bda101a51955c1eeec7c6",
+                "reference": "d7fda32e256ed5a1de3bda101a51955c1eeec7c6",
+                "shasum": ""
+            },
+            "require": {
+                "magento/magento-composer-installer": "*",
+                "php": "~5.5|~5.6|~7.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "ADM\\QuickDevBar\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Pietri",
+                    "homepage": "http://www.vincent-pietri.fr/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "QuickDevBar is a developer toolbar for magento 2",
+            "time": "2016-11-09 09:22:06"
         },
         {
             "name": "zendframework/zend-code",
