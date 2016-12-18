@@ -78,7 +78,7 @@ setupVhost()
 	if [ -s /etc/nginx/conf.d/$VHOST ]; then
 		sudo rm -rf /etc/nginx/conf.d/$VHOST
 	fi
-	sudo cp nginx.conf.sample /etc/nginx/conf.d/$VHOST
+	sudo cp nginx.conf /etc/nginx/conf.d/$VHOST
 	sudo sh -c -- "echo '127.0.0.1 ${DOMAIN}' >> /etc/hosts"
 }
 
