@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Smart. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="Smart_Magerun::smart_magerungrid_main" title="Magerun" module="Smart_Magerun"  sortOrder="200" dependsOnModule="Smart_Magerun" parent="Magento_Backend::system" resource="Smart_Magerun::smart_magerungrid_main"/>
+        <add id="Smart_Magerun::smart_magerungrid_index" title="Task" module="Smart_Magerun"  sortOrder="10" dependsOnModule="Smart_Magerun" action="magerun/magerungrid/index" parent="Smart_Magerun::smart_magerungrid_main" resource="Smart_Magerun::smart_magerungrid_index"/>
+    </menu>
+</config>

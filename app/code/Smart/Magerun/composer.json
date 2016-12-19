@@ -1,0 +1,27 @@
+{
+    "name": "smart/magerun",
+    "description": "Smart Magerun administrator tool for Magento 2",
+    "homepage": "git@github.com:dhduc/SmartMagerun.git",
+    "authors": [
+        {
+            "name": "Duc Dao",
+            "email": "huuduc.uneti@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "~5.6.0|7.0.2|~7.0.6"
+    },
+    "type": "magento2-module",
+    "version": "dev-master",
+    "license": [
+        "MIT"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Magento\\ExternalLinks\\": ""
+        }
+    }
+}
