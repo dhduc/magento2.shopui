@@ -8,20 +8,13 @@ namespace Smart\Logger\Block;
 class QuickLog extends \Magento\Framework\View\Element\Template
 {
     /**
-     * @var \Psr\Log\LoggerInterface
-     */
-    protected $logger;
-
-    /**
      * QuickLog constructor.
      * @param \Magento\Framework\View\Element\Template\Context $context
      * @param array $data
-     * @param \Psr\Log\LoggerInterface $logger
      */
     public function __construct(
-        \Magento\Framework\View\Element\Template\Context $context, array $data = array(), \Psr\Log\LoggerInterface $logger
+        \Magento\Framework\View\Element\Template\Context $context, array $data = array()
     ) {
-        $this->logger = $logger;
         parent::__construct($context, $data);
     }
 
