@@ -4,9 +4,95 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "00e7ec9a9fe8b7620660b4ccdac36046",
-    "content-hash": "9fe570035ed144c5a32a51dbc98a01dc",
+    "hash": "8d34629a83bedfdcb386351a766dbf4d",
+    "content-hash": "a2aa0ff36adbc7b18cfc3f5be5f6b26a",
     "packages": [
+        {
+            "name": "algolia/algoliasearch-client-php",
+            "version": "1.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/algolia/algoliasearch-client-php.git",
+                "reference": "dd0f04de8e33b091f546fd02e0d54311473c1e1f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/algolia/algoliasearch-client-php/zipball/dd0f04de8e33b091f546fd02e0d54311473c1e1f",
+                "reference": "dd0f04de8e33b091f546fd02e0d54311473c1e1f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8 || ^5.0",
+                "satooshi/php-coveralls": "0.6.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "AlgoliaSearch": "src/",
+                    "AlgoliaSearch\\Tests": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Algolia Team",
+                    "email": "contact@algolia.com"
+                },
+                {
+                    "name": "Ryan T. Catlin",
+                    "email": "ryan.catlin@gmail.com"
+                },
+                {
+                    "name": "Jonathan H. Wage",
+                    "email": "jonwage@gmail.com"
+                }
+            ],
+            "description": "Algolia Search API Client for PHP",
+            "homepage": "https://github.com/algolia/algoliasearch-client-php",
+            "time": "2016-12-21 14:12:19"
+        },
+        {
+            "name": "algolia/algoliasearch-magento-2",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/algolia/algoliasearch-magento-2.git",
+                "reference": "85d3840dd74ef369b9b0a1b31de8e627f2040bbc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/algolia/algoliasearch-magento-2/zipball/85d3840dd74ef369b9b0a1b31de8e627f2040bbc",
+                "reference": "85d3840dd74ef369b9b0a1b31de8e627f2040bbc",
+                "shasum": ""
+            },
+            "require": {
+                "algolia/algoliasearch-client-php": ">=1.10.2 <2.0",
+                "magento/framework": "~100.0",
+                "php": "~5.5.0|~5.6.0|~7.0.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Algolia\\AlgoliaSearch\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Algolia Search integration for Magento 2",
+            "time": "2017-01-07 00:50:57"
+        },
         {
             "name": "braintree/braintree_php",
             "version": "3.7.0",
