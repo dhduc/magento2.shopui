@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Unet_SocialShare::css/social-share.css" />
+    </head>
+    <body>
+        <referenceBlock name="head.additional">
+            <block class="Magento\Framework\View\Element\Template" name="opengraph.general" template="Unet_SocialShare::opengraph.phtml" before="social.share.components" />
+            <block class="Magento\Framework\View\Element\Template" name="social.share.components" template="Unet_SocialShare::components.phtml" after="-" />
+        </referenceBlock>
+        <referenceContainer name="footer">
+            <block class="Magento\Framework\View\Element\Template" name="content.shareto" template="Unet_SocialShare::shareto.phtml" after="-" />
+        </referenceContainer>
+    </body>
+</page>
