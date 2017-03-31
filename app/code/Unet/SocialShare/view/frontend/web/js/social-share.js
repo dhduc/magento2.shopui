@@ -48,10 +48,24 @@ define(["jquery"], function ($) {
                         var shareItem = $('<li>', {class: $this.itemClass});
                         var shareLink = $('<a>');
                         var shareIcon = $('<i>', {class: 'icon ' + key});
+                        var href = '';
+                        switch (key) {
+                            case 'facebook':
+                                href = config[key] + '?u=' + url + '&title=' + $this.title;
+                                break;
+                            case 'twitter':
+                                href = config[key] + '?text=' + $this.title + '&url=' + url;
+                                break;
+                            case 'google-plus':
+                                href = config[key] + '?url=' + url;
+                                break;
+                            case 'pinterest':
+                                href = config[key] + '?url=' + url + '&description=' + $this.title;
+                                break;
+                        }
 
                         // render item
-                        shareIcon.append(key);
-                        shareLink.attr('href', config[key] + currentStoreUrl);
+                        shareLink.attr('href', href);
                         shareLink.append(shareIcon);
                         shareItem.append(shareLink);
                         shareBlock.append(shareItem);
