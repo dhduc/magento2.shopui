@@ -29,7 +29,10 @@ matrix:
     - php: 7.0
       env: TEST_SUITE=static
 # before_install: ./dev/travis/before_install.sh
-install: composer install --no-interaction --prefer-dist
+install: 
+  - composer self-update -q
+  - if [ -n "$GITHUB_OAUTH_TOKEN" ]; then composer config github-oauth.github.com ${GITHUB_OAUTH_TOKEN}; fi;
+  - composer install --no-interaction --prefer-dist
 before_script: ./dev/travis/before_script.sh
 script: 
   - cd dev/tests/$TEST_SUITE
