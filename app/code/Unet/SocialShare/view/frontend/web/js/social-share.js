@@ -8,10 +8,12 @@ define(["jquery"], function ($) {
     return function socialShare(data) {
         var socialShare = {
             config: data.config,
-            currentStoreUrl: data.currentStoreUrl,
+            url: data.url,
+            title: data.title,
             shareBlock: '#shareto .share-list',
             shareButton: '#shareto .button',
             itemClass: 'share-icon',
+            iconFont: 'entypo',
             iconType: 'square',
             width: 800,
             height: 600,
@@ -21,7 +23,7 @@ define(["jquery"], function ($) {
              */
             init: function() {
                 this.click();
-                this.render(this.config, this.currentStoreUrl);
+                this.render(this.config, this.url);
                 this.openPopup();
             },
 
@@ -38,16 +40,15 @@ define(["jquery"], function ($) {
             /**
              * render share items
              * @param config
-             * @param currentStoreUrl
+             * @param url
              */
-            render: function (config, currentStoreUrl) {
+            render: function (config, url) {
                 var $this = this;
                 var shareBlock = $(this.shareBlock);
                 for (var key in config) {
                     if (config.hasOwnProperty(key)) {
-                        var shareItem = $('<li>', {class: $this.itemClass});
+                        var shareItem = $('<li>', {class: $this.itemClass + ' ' + $this.iconFont + '-' + key});
                         var shareLink = $('<a>');
-                        var shareIcon = $('<i>', {class: 'icon ' + key});
                         var href = '';
                         switch (key) {
                             case 'facebook':
@@ -56,7 +57,7 @@ define(["jquery"], function ($) {
                             case 'twitter':
                                 href = config[key] + '?text=' + $this.title + '&url=' + url;
                                 break;
-                            case 'google-plus':
+                            case 'gplus':
                                 href = config[key] + '?url=' + url;
                                 break;
                             case 'pinterest':
@@ -66,7 +67,6 @@ define(["jquery"], function ($) {
 
                         // render item
                         shareLink.attr('href', href);
-                        shareLink.append(shareIcon);
                         shareItem.append(shareLink);
                         shareBlock.append(shareItem);
                     }

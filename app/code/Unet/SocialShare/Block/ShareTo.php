@@ -3,10 +3,10 @@
 namespace Unet\SocialShare\Block;
 
 /**
- * Class Share
+ * Class ShareTo
  * @package Unet\SocialShare\Block
  */
-class ShareTo extends \Magento\Framework\View\Element\Template
+class ShareTo extends \Unet\SocialShare\Block\AbstractShare
 {
 
 }

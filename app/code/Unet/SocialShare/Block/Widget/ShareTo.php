@@ -1,12 +1,24 @@
 <?php
 
-namespace Unet\SocialShare\Block;
+namespace Unet\SocialShare\Block\Widget;
 
 /**
  * Class Share
- * @package Unet\SocialShare\Block
+ * @package Unet\SocialShare\Block\Widget
  */
-class ShareTo extends \Magento\Framework\View\Element\Template
+class ShareTo extends \Unet\SocialShare\Block\AbstractShare
 {
+    /**
+     * @var string
+     */
+    private $_template = "Unet_SocialShare::shareto.phtml";
 
+    /**
+     * setTemplate
+     */
+    protected function _construct()
+    {
+        parent::_construct();
+        $this->setTemplate($this->_template);
+    }
 }

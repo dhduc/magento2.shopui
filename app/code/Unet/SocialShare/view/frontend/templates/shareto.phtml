@@ -9,7 +9,9 @@
 /** @var $block \Magento\Catalog\Block\Product\View*/
 ?>
 <div id="shareto" class="shareto" data-role="share-to-links">
-	<ul class="share-list dropdown"></ul>
+	<div class="social">
+        <ul class="share-list"></ul>
+    </div>
 </div>
 
 <?php
@@ -19,8 +21,9 @@
     {
         "[data-role=share-to-links]": {
             "Unet_SocialShare/js/social-share" : {
-                "currentStoreUrl": "<?php /* @escapeNotVerified */ echo $_themeHelper->getCurrentStoreUrl(); ?>",
-                "config": <?php /* @escapeNotVerified */ echo json_encode($_themeHelper->getShareConfig()); ?>
+                "title": "<?php /* @escapeNotVerified */ echo $_themeHelper->getTitle(); ?>",
+                "url": "<?php /* @escapeNotVerified */ echo $_themeHelper->getCurrentStoreUrl(); ?>",
+                "config": <?php /* @escapeNotVerified */ echo json_encode($block->getShareConfig()); ?>
             }
         }
     }

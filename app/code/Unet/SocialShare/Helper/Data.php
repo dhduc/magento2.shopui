@@ -234,20 +234,6 @@ class Data extends AbstractHelper
     }
 
     /**
-     * @return string
-     */
-    public function getShareConfig() {
-        $config = [
-            'facebook' => \Unet\SocialShare\Api\SocialAdapter::FACEBOOK_SHARE_LINK,
-            'twitter' => \Unet\SocialShare\Api\SocialAdapter::TWITTER_SHARE_LINK,
-            'google-plus' => \Unet\SocialShare\Api\SocialAdapter::GOOGLE_PLUS_SHARE_LINK,
-            'pinterest' => \Unet\SocialShare\Api\SocialAdapter::PINTEREST_SHARE_LINK
-        ];
-
-        return $config;
-    }
-
-    /**
      * @param $attribute
      * @return array
      */

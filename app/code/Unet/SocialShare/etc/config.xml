@@ -7,10 +7,13 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <unet_studio>
-            <social_share>
+        <social_share>
+            <general>
+                <enable>1</enable>
+            </general>
+            <network>
                 <twitter_site_name>unetstudio</twitter_site_name>
-            </social_share>
-        </unet_studio>
+            </network>
+        </social_share>
     </default>
 </config>

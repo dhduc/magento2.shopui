@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
-    <widget id="social_share_widget" class="\Unet\SocialShare\Block\Widget\Share">
-        <label translate="true">Social Share Widget</label>
+    <widget id="social_share_widget" class="Unet\SocialShare\Block\Widget\ShareTo"
+        placeholder_image="Unet_SocialShare::images/widget_share.png">
+        <label translate="true">Unet Social Share Widget</label>
         <description>Social Share Widget</description>
     </widget>
 </widgets>
