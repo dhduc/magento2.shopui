@@ -33,7 +33,8 @@ install:
   - composer self-update -q
   - if [ -n "$GITHUB_OAUTH_TOKEN" ]; then composer config github-oauth.github.com ${GITHUB_OAUTH_TOKEN}; fi;
   - composer install --no-interaction --prefer-dist
-before_script: ./dev/travis/before_script.sh
+before_script: 
+  # - ./dev/travis/before_script.sh
 script: 
   - cd dev/tests/$TEST_SUITE
   - test $TEST_SUITE = "static" && TEST_FILTER='--filter "Magento\\Test\\Php\\LiveCodeTest"' || true
