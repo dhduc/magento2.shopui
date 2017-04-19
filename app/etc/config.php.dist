@@ -2,7 +2,6 @@
 return array (
   'modules' => 
   array (
-    'ADM_QuickDevBar' => 1,
     'Algolia_AlgoliaSearch' => 1,
     'Magento_Store' => 1,
     'Magento_AdvancedPricingImportExport' => 1,
@@ -126,14 +125,10 @@ return array (
     'Magento_WidgetSampleData' => 1,
     'Magento_Wishlist' => 1,
     'Magento_WishlistSampleData' => 1,
-    'Smart_AdminRun' => 1,
     'Smart_CustomWidget' => 1,
     'Smart_Logger' => 1,
     'Smart_Magerun' => 1,
-    'Smart_Pos' => 1,
-    'Smart_Products' => 1,
     'Smart_SendMail' => 1,
-    'Smart_Setting' => 1,
-    'Unet_SocialShare' => 1,
+    'Smart_Setting' => 1
   ),
 );
