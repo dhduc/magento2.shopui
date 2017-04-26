@@ -2,6 +2,7 @@
 return array (
   'modules' => 
   array (
+    'ADM_QuickDevBar' => 1,
     'Algolia_AlgoliaSearch' => 1,
     'Magento_Store' => 1,
     'Magento_AdvancedPricingImportExport' => 1,
@@ -88,7 +89,6 @@ return array (
     'Magento_Rss' => 1,
     'Magento_CatalogRuleConfigurable' => 1,
     'Magento_Authorizenet' => 1,
-    'Magento_SalesInventory' => 1,
     'Magento_OfflineShippingSampleData' => 1,
     'Magento_BundleSampleData' => 1,
     'Magento_ConfigurableSampleData' => 1,
