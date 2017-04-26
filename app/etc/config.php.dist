@@ -128,6 +128,7 @@ return array (
     'Smart_CustomWidget' => 1,
     'Smart_Logger' => 1,
     'Smart_SendMail' => 1,
-    'Smart_Setting' => 1
+    'Smart_Setting' => 1,
+    'Unet_SocialShare' => 1
   ),
 );
