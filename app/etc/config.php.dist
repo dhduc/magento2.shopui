@@ -127,7 +127,6 @@ return array (
     'Magento_WishlistSampleData' => 1,
     'Smart_CustomWidget' => 1,
     'Smart_Logger' => 1,
-    'Smart_Magerun' => 1,
     'Smart_SendMail' => 1,
     'Smart_Setting' => 1
   ),
