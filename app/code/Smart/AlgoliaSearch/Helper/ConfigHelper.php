@@ -21,10 +21,6 @@ class ConfigHelper extends \Algolia\AlgoliaSearch\Helper\ConfigHelper
     const XML_PATH_IMAGE_HEIGHT = 'algoliasearch_images/image/height';
     const XML_PATH_IMAGE_TYPE = 'algoliasearch_images/image/type';
 
-    const DEFAULT_MATERIAL_PATH = 'algolia_config/search_filter/default_material';
-    const MATERIAL_ATTR = 'wap_material';
-    const DEFAULT_ATTR = 'default_material';
-
     private $configInterface;
     private $objectManager;
     private $currency;
@@ -158,73 +154,9 @@ class ConfigHelper extends \Algolia\AlgoliaSearch\Helper\ConfigHelper
     /**
      * @return mixed
      */
-    public function getDefaultMaterial()
-    {
-        $default_material_configuration = $this->getDefaultMaterialConfiguration();
-        $default_material_category = $this->getDefaultMaterialCategory();
-        $default_material = $default_material_category;
-
-        if (empty($default_material_category)) {
-            $default_material = $default_material_configuration;
-        }
-
-        return $default_material;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getCurrentCategory()
     {
         return $this->_coreRegistry->registry('current_category');
-    }
-
-    /**
-     * @return string
-     */
-    public function getDefaultMaterialCategory() {
-        $default_material_category = '';
-        $current_category = $this->getCurrentCategory();
-        if (!empty($current_category)) {
-            $default_material = $current_category->getData(self::DEFAULT_ATTR);
-            if ($default_material) {
-                $default_material_category = $this->getAttributeLabel($default_material);
-            }
-        }
-
-        return $default_material_category;
-    }
-
-    /**
-     * Get attribute label from attribute value
-     * @param $attributeValue
-     * @return string
-     */
-    public function getAttributeLabel($attributeValue) {
-        $attribute = $this->eavConfig->getAttribute('catalog_product', self::MATERIAL_ATTR);
-        $options = $attribute->getSource()->getAllOptions();
-        $attributeLabel = '';
-        foreach ($options as $_option) {
-            if ($_option['value'] == $attributeValue) {
-                $attributeLabel = $_option['label'];
-            }
-        }
-
-        return $attributeLabel;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDefaultMaterialConfiguration()
-    {
-        $default_material = $this->configInterface->getValue(
-            self::DEFAULT_MATERIAL_PATH,
-            \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
-            $this->storeManager->getStore()->getStoreId()
-        );
-
-        return $default_material;
     }
 
     /**
