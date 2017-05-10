@@ -55,7 +55,12 @@ requirejs(['algoliaBundle'], function(algoliaBundle) {
 			urlSync: {
 				useHash: true,
 				trackedParameters: ['query', 'page', 'attribute:*', 'index']
-			}
+			},
+			searchParameters: {
+                disjunctiveFacetsRefinements: {
+                    color: ['Blue']
+                }
+            }
 		});
 		
 		search.client.addAlgoliaAgent('Magento2 integration (' + algoliaConfig.extensionVersion + ')');
